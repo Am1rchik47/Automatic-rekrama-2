@@ -40,8 +40,8 @@ def build_post_text():
 📌Курьерские услуги 
 📌Онлайн оплата
 🔥Сообщества VK:
-https://vk.com/uldashsoo
-https://vk.com/taxi_mrk_ufa"""
+https://vk.ru/uldashsoo
+https://vk.ru/taxi_mrk_ufa"""
 
 
 POST_TEXT = build_post_text()
@@ -101,7 +101,7 @@ def publish_vk_post(token, group_id, text):
     }
 
     try:
-        response = requests.post("https://api.vk.com/method/wall.post", data=params, headers=HEADERS, timeout=10)
+        response = requests.post("https://api.vk.ru/method/wall.post", data=params, headers=HEADERS, timeout=10)
         data = response.json()
 
         if "response" in data:
